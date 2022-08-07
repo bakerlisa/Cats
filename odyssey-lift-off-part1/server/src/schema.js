@@ -2,14 +2,14 @@ const {gql} = require('apollo-server');
 
 const typeDefs = gql`
     type Query {
-        tracksForHome: [Track]
+        tracksForHome: [Track!]!
     }
 
     "A track is a specific group of modules that teaches about a specific topic"
     type Track {
         "Track unique ID"
         id: ID!
-        "Title of the Track
+        "Title of the Track"
         title: String!
         "Author or the track"
         author: Author!
